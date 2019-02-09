@@ -1,0 +1,8 @@
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\bin\Release\Remove_dup_lines.dll
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\bin\Release\Remove_dup_lines.pdb
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Release\Remove_dup_lines.frmMyDlg.resources
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Release\Remove_dup_lines.Properties.Resources.resources
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Release\Remove dup lines.csproj.GenerateResource.Cache
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Release\Remove_dup_lines.dll
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Release\Remove_dup_lines.pdb
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Release\Remove dup lines.csprojResolveAssemblyReference.cache

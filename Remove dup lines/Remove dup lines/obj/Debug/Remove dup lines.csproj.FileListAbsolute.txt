@@ -1,0 +1,12 @@
+c:\users\rinku\documents\visual studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Debug\Remove_dup_lines.frmMyDlg.resources
+c:\users\rinku\documents\visual studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Debug\Remove_dup_lines.Properties.Resources.resources
+c:\users\rinku\documents\visual studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Debug\Remove dup lines.csproj.GenerateResource.Cache
+c:\users\rinku\documents\visual studio 2010\Projects\Remove dup lines\Remove dup lines\bin\Debug\Remove dup lines.dll
+c:\users\rinku\documents\visual studio 2010\Projects\Remove dup lines\Remove dup lines\bin\Debug\Remove dup lines.pdb
+C:\Users\rinku\documents\visual studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Debug\Remove dup lines.csprojResolveAssemblyReference.cache
+C:\ProgramData\Notepad++\plugins\Remove dup lines\Remove_dup_lines.dll
+C:\ProgramData\Notepad++\plugins\Remove dup lines\Remove_dup_lines.pdb
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Debug\Remove_dup_lines.dll
+C:\Users\rinku\Documents\Visual Studio 2010\Projects\Remove dup lines\Remove dup lines\obj\Debug\Remove_dup_lines.pdb
+C:\ProgramData\Notepad++\plugins\Remove_dup_lines\Remove_dup_lines.dll
+C:\ProgramData\Notepad++\plugins\Remove_dup_lines\Remove_dup_lines.pdb
