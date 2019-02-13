@@ -2,14 +2,8 @@
 using System.IO;
 using System.Text;
 using System.Linq;
-using System.Drawing;
-using System.Threading;
-using System.Collections;
 using System.Windows.Forms;
-using System.ComponentModel;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using NppPluginNET;
 
 namespace Remove_dup_lines
@@ -56,13 +50,13 @@ namespace Remove_dup_lines
                 using (StringWriter writer = new StringWriter())
                 {
                     string line;
-                    int x = 1000000000;
+                    int x = 1;
                     while((line = reader.ReadLine()) != null)
                     {
                         x += 1;
                         if (string.IsNullOrEmpty(line.Trim()))
                         {
-                            line = Regex.Replace(line, "", "3f5456cfsd661lld3334349j55kkk" + x);
+                            line = Regex.Replace(line, "", "3f5456cfsd661lld3334349j55kkk000000000000000000000000000000000000jgggggjyyyyyy" + x);
                         }
                         writer.WriteLine(line);
                     }
@@ -78,7 +72,7 @@ namespace Remove_dup_lines
                     string linek;
                     while ((linek = readerr.ReadLine()) != null)
                     {
-                        string uu = Regex.Replace(linek, "^3f5456cfsd661lld3334349j55kkk.*$", "");
+                        string uu = Regex.Replace(linek, "^3f5456cfsd661lld3334349j55kkk000000000000000000000000000000000000jgggggjyyyyyy.*$", "");
                         writerr.WriteLine(uu);
                     }
                     outputStrin = writerr.ToString();
