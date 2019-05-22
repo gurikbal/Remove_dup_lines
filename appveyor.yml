@@ -1,0 +1,63 @@
+version: 1.0.0.{build}
+image: Visual Studio 2017
+
+
+platform:
+    - Any CPU
+    #- x64
+
+configuration:
+    - Debug
+    - Release
+
+install:
+    - if "%platform%"=="x64" set archi=amd64
+    - if "%platform%"=="x64" set platform_input=x64
+
+    - if "%platform%"=="Any CPU" set archi=x86
+    - if "%platform%"=="Any CPU" set platform_input=Any CPU
+
+    - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" %archi%
+
+build_script:
+    - cd "%APPVEYOR_BUILD_FOLDER%"\"Remove dup lines"
+    - msbuild "Remove dup lines.sln" /m /p:configuration="%configuration%" /p:platform="%platform_input%"
+
+after_build:
+    - cd "%APPVEYOR_BUILD_FOLDER%"\"Remove dup lines"
+    - ps: >-
+
+        if ($env:PLATFORM_INPUT -eq "x64") {
+            Push-AppveyorArtifact "bin\$($env:PLATFORM_INPUT)\$($env:CONFIGURATION)\Remove dup lines.dll" -FileName Remove dup lines.dll
+        }
+
+        if ($env:PLATFORM_INPUT -eq "AnyCPU" ) {
+            Push-AppveyorArtifact "bin\$($env:CONFIGURATION)\Remove dup lines.dll" -FileName Remove dup lines.dll
+        }
+
+        if ($($env:APPVEYOR_REPO_TAG) -eq "true" -and $env:CONFIGURATION -eq "Release") {
+            if($env:PLATFORM_INPUT -eq "x64"){
+                $ZipFileName = "NppHash_$($env:APPVEYOR_REPO_TAG_NAME)_x64.zip"
+                7z a $ZipFileName bin\$env:PLATFORM_INPUT\$env:CONFIGURATION\Remove dup lines.dll
+            }
+            if($env:PLATFORM_INPUT -eq "AnyCPU"){
+                $ZipFileName = "NppHash_$($env:APPVEYOR_REPO_TAG_NAME)_x86.zip"
+                7z a $ZipFileName bin\$env:CONFIGURATION\Remove dup lines.dll
+            }
+        }
+
+artifacts:
+  - path: Remove_dup_lines_*.zip
+    name: releases
+
+deploy:
+    provider: GitHub
+    auth_token:
+        secure: !!TODO, see https://www.appveyor.com/docs/deployment/github/#provider-settings!!
+    artifact: releases
+    draft: false
+    prerelease: false
+    force_update: true
+    on:
+        appveyor_repo_tag: true
+        configuration: Release
