@@ -19,8 +19,8 @@ namespace Remove_dup_lines
         #region " StartUp/CleanUp "
         internal static void CommandMenuInit()
         {
-            PluginBase.SetCommand(0, "Remove duplicate lines", selection, new ShortcutKey(false, false, false, Keys.None));
-            PluginBase.SetCommand(3, "About", about, new ShortcutKey(false, false, false, Keys.None));
+            PluginBase.SetCommand(0, "Remove duplicate lines", Selection, new ShortcutKey(false, false, false, Keys.None));
+            PluginBase.SetCommand(3, "About", About, new ShortcutKey(false, false, false, Keys.None));
         }
         internal static void SetToolBarIcon()
         {
@@ -33,12 +33,12 @@ namespace Remove_dup_lines
         #endregion
 
         #region " Menu functions "
-        internal static void about()
+        internal static void About()
         {
             var ss = " To Remove all visible Duplicate lines Remove Whitespace first\n              Edit > Blank Operations > Trim Trailing Space \n\n       ****** Remove Duplicate lines Except Empty lines ******  \n                                       build by G. Singh  \n                                  29-10-2019 build 1.2.0.0  ";
             MessageBox.Show(ss);
         }
-        internal static void selection()
+        internal static void Selection()
         {
             int selectionLength = (int)Win32.SendMessage(PluginBase.GetCurrentScintilla(), SciMsg.SCI_GETSELTEXT, 0, 0);
             StringBuilder inputText = new StringBuilder(selectionLength);
