@@ -19,8 +19,8 @@ namespace Remove_dup_lines
         #region " StartUp/CleanUp "
         internal static void CommandMenuInit()
         {
-            PluginBase.SetCommand(0, "Remove duplicate lines (in selection)", selection, new ShortcutKey(false, false, false, Keys.None));
-            PluginBase.SetCommand(0, "About", about, new ShortcutKey(false, false, false, Keys.None));
+            PluginBase.SetCommand(0, "Remove duplicate lines", selection, new ShortcutKey(false, false, false, Keys.None));
+            PluginBase.SetCommand(3, "About", about, new ShortcutKey(false, false, false, Keys.None));
         }
         internal static void SetToolBarIcon()
         {
@@ -35,7 +35,7 @@ namespace Remove_dup_lines
         #region " Menu functions "
         internal static void about()
         {
-            var ss = "                   To Remove all visible Duplicate lines Use \n              Edit > Blank Operations > Trim Trailing Space \n\n       ****** Remove Duplicate lines Except Empty lines ******  \n                                       build by G. Singh  \n                                  17-09-2019 build 1.0.9.0  ";
+            var ss = " To Remove all visible Duplicate lines Remove Whitespace first\n              Edit > Blank Operations > Trim Trailing Space \n\n       ****** Remove Duplicate lines Except Empty lines ******  \n                                       build by G. Singh  \n                                  17-09-2019 build 1.1.0.0  ";
             MessageBox.Show(ss);
         }
         internal static void selection()
@@ -43,6 +43,7 @@ namespace Remove_dup_lines
             int selectionLength = (int)Win32.SendMessage(PluginBase.GetCurrentScintilla(), SciMsg.SCI_GETSELTEXT, 0, 0);
             StringBuilder inputText = new StringBuilder(selectionLength);
             Win32.SendMessage(PluginBase.GetCurrentScintilla(), SciMsg.SCI_GETSELTEXT, 0, inputText);
+
             if (string.IsNullOrEmpty(inputText.ToString()))
             {
                 MessageBox.Show("please select lines first");
