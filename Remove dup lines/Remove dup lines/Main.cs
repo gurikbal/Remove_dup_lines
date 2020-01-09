@@ -12,8 +12,8 @@ namespace Remove_dup_lines
     {
         #region " Fields "
         internal const string PluginName = "Remove Duplicate lines";
-        static string iniFilePath = null;
-        static bool someSetting = false;
+
+
         #endregion
 
         #region " StartUp/CleanUp "
@@ -28,7 +28,7 @@ namespace Remove_dup_lines
         }
         internal static void PluginCleanUp()
         {
-            Win32.WritePrivateProfileString("SomeSection", "SomeKey", someSetting ? "1" : "0", iniFilePath);
+
         }
         #endregion
 
