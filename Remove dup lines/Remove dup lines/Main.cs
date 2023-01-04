@@ -35,7 +35,7 @@ namespace Remove_dup_lines
         #region " Menu functions "
         internal static void About()
         {
-            var ss = " To Remove all visible Duplicate lines Remove Whitespace first\n              Edit > Blank Operations > Trim Trailing Space \n\n       ****** Remove Duplicate lines Except Empty lines ******  \n                                       build by G. Singh  \n                                  29-10-2019 build 1.3.0.0  ";
+            var ss = " To Remove all visible Duplicate lines Remove Whitespace first\n              Edit > Blank Operations > Trim Trailing Space \n\n       ****** Remove Duplicate lines Except Empty lines ******  \n                                       build by G. Singh  \n                                  29-10-2019 build 1.3.0.2  ";
             MessageBox.Show(ss);
         }
         internal static void Selection()
